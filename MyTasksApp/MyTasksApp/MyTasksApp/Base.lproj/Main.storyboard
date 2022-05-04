@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zfa-lx-MYN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Tasks-->
+        <scene sceneID="qMp-Jy-gPc">
+            <objects>
+                <tableViewController storyboardIdentifier="tasksTableViewController" id="OH4-m7-vhX" customClass="tasksTableViewController" customModule="MyTasksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="z4r-xY-QkT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TaskCell" rowHeight="83" id="MLm-jw-AVm" customClass="taskTableViewCell" customModule="MyTasksApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="83"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MLm-jw-AVm" id="efI-r2-iLi">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJJ-Hs-VaY">
+                                            <rect key="frame" x="99" y="11" width="2" height="65"/>
+                                            <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="2" id="d82-SU-A8q"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marketing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xn1-ro-dM8">
+                                            <rect key="frame" x="112" y="17" width="277.5" height="14"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esta é uma task que estou fazendo para meu aplicativo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDt-WI-jiZ">
+                                            <rect key="frame" x="112" y="32" width="277.5" height="36"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSX-O3-NTP">
+                                            <rect key="frame" x="20" y="18.5" width="63" height="30"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03/05/2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C52-va-hUB">
+                                            <rect key="frame" x="20.5" y="49" width="62" height="14"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="xJJ-Hs-VaY" firstAttribute="leading" secondItem="TSX-O3-NTP" secondAttribute="trailing" constant="16" id="0he-5Q-LXW"/>
+                                        <constraint firstItem="aDt-WI-jiZ" firstAttribute="top" secondItem="Xn1-ro-dM8" secondAttribute="bottom" constant="1" id="0lT-iN-1WQ"/>
+                                        <constraint firstItem="Xn1-ro-dM8" firstAttribute="trailing" secondItem="aDt-WI-jiZ" secondAttribute="trailing" id="1zq-n0-6x6"/>
+                                        <constraint firstItem="xJJ-Hs-VaY" firstAttribute="top" secondItem="efI-r2-iLi" secondAttribute="top" constant="11" id="7uy-Lc-YfR"/>
+                                        <constraint firstItem="TSX-O3-NTP" firstAttribute="leading" secondItem="efI-r2-iLi" secondAttribute="leading" constant="20" symbolic="YES" id="Hig-Q7-Txb"/>
+                                        <constraint firstItem="C52-va-hUB" firstAttribute="top" secondItem="TSX-O3-NTP" secondAttribute="bottom" constant="0.5" id="IG9-OR-hIS"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="aDt-WI-jiZ" secondAttribute="bottom" constant="10" id="JOT-GB-iSZ"/>
+                                        <constraint firstItem="aDt-WI-jiZ" firstAttribute="leading" secondItem="TSX-O3-NTP" secondAttribute="trailing" constant="29" id="MGE-cc-NcD"/>
+                                        <constraint firstAttribute="bottom" secondItem="xJJ-Hs-VaY" secondAttribute="bottom" constant="7" id="VuX-us-xGv"/>
+                                        <constraint firstItem="TSX-O3-NTP" firstAttribute="centerY" secondItem="efI-r2-iLi" secondAttribute="centerY" constant="-8" id="aab-HO-U5m"/>
+                                        <constraint firstItem="Xn1-ro-dM8" firstAttribute="top" secondItem="efI-r2-iLi" secondAttribute="top" constant="17" id="f0E-J8-fFy"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aDt-WI-jiZ" secondAttribute="trailing" constant="10" id="kQg-wD-ap7"/>
+                                        <constraint firstItem="C52-va-hUB" firstAttribute="centerX" secondItem="TSX-O3-NTP" secondAttribute="centerX" id="oKI-sy-77N"/>
+                                        <constraint firstItem="Xn1-ro-dM8" firstAttribute="leading" secondItem="aDt-WI-jiZ" secondAttribute="leading" id="r3C-5I-7sp"/>
+                                        <constraint firstItem="xJJ-Hs-VaY" firstAttribute="top" secondItem="Xn1-ro-dM8" secondAttribute="bottom" constant="-20" id="yyf-s8-TFf"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoruNameLabel" destination="Xn1-ro-dM8" id="4dV-Ws-fLh"/>
+                                    <outlet property="categoryView" destination="xJJ-Hs-VaY" id="aX0-F4-X9p"/>
+                                    <outlet property="dateLabel" destination="C52-va-hUB" id="edf-MZ-i0c"/>
+                                    <outlet property="hourLabel" destination="TSX-O3-NTP" id="Wrq-dZ-aoA"/>
+                                    <outlet property="taskDescriptionLabel" destination="aDt-WI-jiZ" id="4Os-XQ-Muz"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OH4-m7-vhX" id="oXZ-If-xcv"/>
+                            <outlet property="delegate" destination="OH4-m7-vhX" id="FLB-An-2cL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Tasks" id="wte-nF-b6F"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ai5-vk-VkW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="501.44927536231887" y="102.45535714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="29B-sL-Ln1">
+            <objects>
+                <navigationController id="Zfa-lx-MYN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Pn-Il-IFK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OH4-m7-vhX" kind="relationship" relationship="rootViewController" id="6hQ-4j-hY8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cza-85-uN0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-387" y="103"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
