@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF12763C287638E300D2F308 /* SourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF12763B287638E300D2F308 /* SourceModel.swift */; };
+		CF12763E2876394100D2F308 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF12763D2876394100D2F308 /* NewsModel.swift */; };
+		CF12764128763A4500D2F308 /* NewsListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF12764028763A4500D2F308 /* NewsListRepository.swift */; };
 		CF640D4A2874F918004BE588 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF640D492874F918004BE588 /* AppDelegate.swift */; };
 		CF640D4C2874F918004BE588 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF640D4B2874F918004BE588 /* SceneDelegate.swift */; };
 		CF640D4E2874F918004BE588 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF640D4D2874F918004BE588 /* ViewController.swift */; };
@@ -16,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF1276392876384000D2F308 /* NewsList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NewsList.json; sourceTree = "<group>"; };
+		CF12763B287638E300D2F308 /* SourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceModel.swift; sourceTree = "<group>"; };
+		CF12763D2876394100D2F308 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		CF12764028763A4500D2F308 /* NewsListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListRepository.swift; sourceTree = "<group>"; };
 		CF640D462874F918004BE588 /* DioNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DioNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF640D492874F918004BE588 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF640D4B2874F918004BE588 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +44,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF1276362876348900D2F308 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CF640D492874F918004BE588 /* AppDelegate.swift */,
+				CF640D4B2874F918004BE588 /* SceneDelegate.swift */,
+				CF1276392876384000D2F308 /* NewsList.json */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		CF127637287634A400D2F308 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF640D4D2874F918004BE588 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CF127638287634B900D2F308 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CF640D4F2874F918004BE588 /* Main.storyboard */,
+				CF640D542874F919004BE588 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CF12763A287638A200D2F308 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF12763B287638E300D2F308 /* SourceModel.swift */,
+				CF12763D2876394100D2F308 /* NewsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CF12763F28763A1500D2F308 /* LocalRepository */ = {
+			isa = PBXGroup;
+			children = (
+				CF12764028763A4500D2F308 /* NewsListRepository.swift */,
+			);
+			path = LocalRepository;
+			sourceTree = "<group>";
+		};
 		CF640D3D2874F918004BE588 = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +107,12 @@
 		CF640D482874F918004BE588 /* DioNews */ = {
 			isa = PBXGroup;
 			children = (
-				CF640D492874F918004BE588 /* AppDelegate.swift */,
-				CF640D4B2874F918004BE588 /* SceneDelegate.swift */,
-				CF640D4D2874F918004BE588 /* ViewController.swift */,
-				CF640D4F2874F918004BE588 /* Main.storyboard */,
+				CF12763F28763A1500D2F308 /* LocalRepository */,
+				CF12763A287638A200D2F308 /* Models */,
+				CF127638287634B900D2F308 /* Views */,
+				CF127637287634A400D2F308 /* Controllers */,
+				CF1276362876348900D2F308 /* SupportingFiles */,
 				CF640D522874F919004BE588 /* Assets.xcassets */,
-				CF640D542874F919004BE588 /* LaunchScreen.storyboard */,
 				CF640D572874F919004BE588 /* Info.plist */,
 			);
 			path = DioNews;
@@ -140,7 +191,10 @@
 			files = (
 				CF640D4E2874F918004BE588 /* ViewController.swift in Sources */,
 				CF640D4A2874F918004BE588 /* AppDelegate.swift in Sources */,
+				CF12763C287638E300D2F308 /* SourceModel.swift in Sources */,
 				CF640D4C2874F918004BE588 /* SceneDelegate.swift in Sources */,
+				CF12764128763A4500D2F308 /* NewsListRepository.swift in Sources */,
+				CF12763E2876394100D2F308 /* NewsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
