@@ -75,6 +75,7 @@
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="link" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MED-WW-j8Y">
                                                 <rect key="frame" x="728" y="-0.5" width="22" height="23"/>
+                                                <color key="tintColor" systemColor="linkColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="eYB-Bu-z3L"/>
                                                     <constraint firstAttribute="width" constant="22" id="mFd-mN-b1S"/>
@@ -105,11 +106,14 @@
                 <outlet property="sourceNameLabel" destination="jby-BU-1WC" id="XhX-7k-qth"/>
                 <outlet property="titleLabel" destination="Trj-gg-jHc" id="J53-rc-R7n"/>
             </connections>
-            <point key="canvasLocation" x="58" y="94"/>
+            <point key="canvasLocation" x="287" y="33"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="link" catalog="system" width="128" height="122"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

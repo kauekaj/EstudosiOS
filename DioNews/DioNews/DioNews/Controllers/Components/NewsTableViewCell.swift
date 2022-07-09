@@ -23,14 +23,17 @@ class NewsTableViewCell: UITableViewCell {
             self.authorLabel.text = news?.author
             self.titleLabel.text = news?.title
             self.descriptionLabel.text = news?.description
-            self.imageImageView.loadImage()
+            self.imageImageView.loadImage(from: news?.urlToImage)
             self.publishLabel.text = news?.publishedAt.toString()
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-       
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(openLink))
+        self.linkImageView.isUserInteractionEnabled = true
+        self.linkImageView.addGestureRecognizer(tap)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -38,18 +41,9 @@ class NewsTableViewCell: UITableViewCell {
 
     }
     
-}
-
-extension UIImageView {
-    func loadImage() {
-        self.image = UIImage(named: "no-image.png")
+    @IBAction func openLink() {
+        guard let news = news, let url = URL(string: news.url) else { return }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 }
 
-extension Date {
-    func toString(with formatter: String = "dd/MM/yyyy") -> String? {
-        let dateFormat = DateFormatter()
-        dateFormat.dateFormat = formatter
-        return dateFormat.string(from: self)
-    }
-}

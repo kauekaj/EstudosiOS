@@ -33,11 +33,28 @@
                     <navigationItem key="navigationItem" title="DIO Notícias" id="rS3-ct-TCQ"/>
                     <connections>
                         <outlet property="newsListTableView" destination="vp8-9J-pU7" id="Xqj-yu-Owm"/>
+                        <segue destination="G9x-5o-eE7" kind="show" identifier="ShowNewsViewController" id="4Hs-Jr-Qs0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3094" y="115"/>
+        </scene>
+        <!--Título-->
+        <scene sceneID="KGa-s9-1bF">
+            <objects>
+                <viewController id="G9x-5o-eE7" customClass="ShowNewsViewController" customModule="DioNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qF1-K5-GVL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="opk-eM-Q6Z"/>
+                        <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Título" largeTitleDisplayMode="never" id="txD-0b-v44"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LSv-rl-TZZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3983" y="115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qWD-Sq-ngG">
@@ -47,7 +64,14 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.51372549019607838" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.0" green="0.51372549019607838" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kXD-5c-Bpg"/>
@@ -55,9 +79,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ji8-GW-J8b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2064" y="114"/>
+            <point key="canvasLocation" x="2096" y="115"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
