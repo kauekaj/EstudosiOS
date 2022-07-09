@@ -43,18 +43,57 @@
         <!--Título-->
         <scene sceneID="KGa-s9-1bF">
             <objects>
-                <viewController id="G9x-5o-eE7" customClass="ShowNewsViewController" customModule="DioNews" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="G9x-5o-eE7" customClass="NewsViewController" customModule="DioNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qF1-K5-GVL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hxn-iq-o9N">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCD-ax-ZL2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="pVU-Of-b7V">
+                                        <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                        <color key="color" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="pVU-Of-b7V" firstAttribute="centerY" secondItem="yCD-ax-ZL2" secondAttribute="centerY" id="DCn-BY-TDr"/>
+                                    <constraint firstItem="pVU-Of-b7V" firstAttribute="centerX" secondItem="yCD-ax-ZL2" secondAttribute="centerX" id="lep-kN-5H2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="opk-eM-Q6Z"/>
                         <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="yCD-ax-ZL2" firstAttribute="centerY" secondItem="qF1-K5-GVL" secondAttribute="centerY" id="3Rq-hc-CTA"/>
+                            <constraint firstItem="yCD-ax-ZL2" firstAttribute="centerX" secondItem="qF1-K5-GVL" secondAttribute="centerX" id="4rH-f1-1QG"/>
+                            <constraint firstItem="Hxn-iq-o9N" firstAttribute="leading" secondItem="opk-eM-Q6Z" secondAttribute="leading" id="Bpw-Oa-G8R"/>
+                            <constraint firstItem="opk-eM-Q6Z" firstAttribute="trailing" secondItem="Hxn-iq-o9N" secondAttribute="trailing" id="HIN-43-aXm"/>
+                            <constraint firstItem="opk-eM-Q6Z" firstAttribute="bottom" secondItem="Hxn-iq-o9N" secondAttribute="bottom" id="RGg-ox-pkY"/>
+                            <constraint firstItem="yCD-ax-ZL2" firstAttribute="height" secondItem="qF1-K5-GVL" secondAttribute="height" id="XKw-lx-b0O"/>
+                            <constraint firstItem="yCD-ax-ZL2" firstAttribute="width" secondItem="qF1-K5-GVL" secondAttribute="width" id="fph-CC-lEM"/>
+                            <constraint firstItem="Hxn-iq-o9N" firstAttribute="top" secondItem="opk-eM-Q6Z" secondAttribute="top" id="jcD-oR-DdC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Título" largeTitleDisplayMode="never" id="txD-0b-v44"/>
+                    <connections>
+                        <outlet property="loadingActivityIndicator" destination="pVU-Of-b7V" id="m3F-2d-BRp"/>
+                        <outlet property="loadingView" destination="yCD-ax-ZL2" id="Cap-eh-Ljn"/>
+                        <outlet property="newsWebView" destination="Hxn-iq-o9N" id="F2L-Dh-JMb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSv-rl-TZZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3983" y="115"/>
+            <point key="canvasLocation" x="3982.6086956521744" y="114.50892857142857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qWD-Sq-ngG">
