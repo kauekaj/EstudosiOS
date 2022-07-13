@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nYc-4h-9jj">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lista Lembrete View Controller-->
+        <scene sceneID="eeg-2k-Omm">
+            <objects>
+                <tableViewController id="nYc-4h-9jj" customClass="ListaLembreteViewController" customModule="AppMVVMTodayDIO" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="SGz-7Z-eP4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LembreteCell" rowHeight="99" id="iLn-dR-Dca" customClass="LembreteCell" customModule="AppMVVMTodayDIO" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="99"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iLn-dR-Dca" id="wN6-06-6Hj">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLg-4O-gRn">
+                                            <rect key="frame" x="32" y="27.5" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="44" id="2Zl-cK-MDP"/>
+                                                <constraint firstAttribute="height" constant="44" id="Rst-iL-T1X"/>
+                                                <constraint firstAttribute="width" secondItem="uLg-4O-gRn" secondAttribute="height" multiplier="1:1" id="wrj-SM-hF2"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain">
+                                                <backgroundConfiguration key="background" image="circle" catalog="system"/>
+                                            </buttonConfiguration>
+                                            <connections>
+                                                <action selector="botaoFeitoApertado:" destination="iLn-dR-Dca" eventType="touchUpInside" id="FKt-iN-9Cb"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dse-cU-esS">
+                                            <rect key="frame" x="86" y="49" width="36" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcC-fv-fdm">
+                                            <rect key="frame" x="86" y="20" width="43" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="IcC-fv-fdm" firstAttribute="top" secondItem="wN6-06-6Hj" secondAttribute="top" constant="20" symbolic="YES" id="0Xh-D4-6Ls"/>
+                                        <constraint firstItem="IcC-fv-fdm" firstAttribute="leading" secondItem="uLg-4O-gRn" secondAttribute="trailing" constant="10" id="BJI-Di-IUn"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dse-cU-esS" secondAttribute="bottom" constant="20" symbolic="YES" id="RfS-2F-XL8"/>
+                                        <constraint firstItem="dse-cU-esS" firstAttribute="leading" secondItem="IcC-fv-fdm" secondAttribute="leading" id="Rmj-Vi-8DZ"/>
+                                        <constraint firstItem="uLg-4O-gRn" firstAttribute="leading" secondItem="wN6-06-6Hj" secondAttribute="leadingMargin" constant="12" id="Sdv-ax-ob1"/>
+                                        <constraint firstItem="uLg-4O-gRn" firstAttribute="centerY" secondItem="wN6-06-6Hj" secondAttribute="centerY" id="Xcy-ji-EpW"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dse-cU-esS" secondAttribute="trailing" constant="20" symbolic="YES" id="ehd-1v-Sk9"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IcC-fv-fdm" secondAttribute="trailing" constant="20" symbolic="YES" id="fpc-QV-sLS"/>
+                                        <constraint firstItem="dse-cU-esS" firstAttribute="top" secondItem="IcC-fv-fdm" secondAttribute="bottom" constant="8" symbolic="YES" id="jP9-iD-j71"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="botaoFeito" destination="uLg-4O-gRn" id="jtW-VC-Qve"/>
+                                    <outlet property="dataLabel" destination="dse-cU-esS" id="7Jy-XP-K7i"/>
+                                    <outlet property="tituloLabel" destination="IcC-fv-fdm" id="5XP-fW-B3B"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nYc-4h-9jj" id="emD-ZK-8s4"/>
+                            <outlet property="delegate" destination="nYc-4h-9jj" id="LxU-vf-kbe"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQj-9w-H9y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-124" y="137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
