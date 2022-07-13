@@ -16,6 +16,8 @@
 		CF47A331287E1C3C00A9E2D0 /* LembreteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A330287E1C3C00A9E2D0 /* LembreteCell.swift */; };
 		CF47A333287E1C4E00A9E2D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF47A332287E1C4E00A9E2D0 /* Main.storyboard */; };
 		CF47A335287E2D5D00A9E2D0 /* DetalheLembreteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A334287E2D5D00A9E2D0 /* DetalheLembreteViewController.swift */; };
+		CF47A337287E398C00A9E2D0 /* LembreteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A336287E398C00A9E2D0 /* LembreteDataSource.swift */; };
+		CF47A339287E3B7300A9E2D0 /* DetalheLembreteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A338287E3B7300A9E2D0 /* DetalheLembreteDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		CF47A330287E1C3C00A9E2D0 /* LembreteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LembreteCell.swift; sourceTree = "<group>"; };
 		CF47A332287E1C4E00A9E2D0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CF47A334287E2D5D00A9E2D0 /* DetalheLembreteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheLembreteViewController.swift; sourceTree = "<group>"; };
+		CF47A336287E398C00A9E2D0 /* LembreteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LembreteDataSource.swift; sourceTree = "<group>"; };
+		CF47A338287E3B7300A9E2D0 /* DetalheLembreteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheLembreteDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +66,60 @@
 		CF47A319287E1BD900A9E2D0 /* AppMVCTodayDIO */ = {
 			isa = PBXGroup;
 			children = (
-				CF47A31A287E1BD900A9E2D0 /* AppDelegate.swift */,
-				CF47A31C287E1BD900A9E2D0 /* SceneDelegate.swift */,
-				CF47A31E287E1BD900A9E2D0 /* ViewController.swift */,
-				CF47A323287E1BDA00A9E2D0 /* Assets.xcassets */,
+				CF47A33A287E40A600A9E2D0 /* AppDelegate */,
+				CF47A33D287E410200A9E2D0 /* Model */,
+				CF47A33B287E40C400A9E2D0 /* View */,
+				CF47A33C287E40DC00A9E2D0 /* ViewController */,
 				CF47A325287E1BDA00A9E2D0 /* LaunchScreen.storyboard */,
 				CF47A328287E1BDA00A9E2D0 /* Info.plist */,
-				CF47A32E287E1C3000A9E2D0 /* Lembrete.swift */,
-				CF47A330287E1C3C00A9E2D0 /* LembreteCell.swift */,
-				CF47A332287E1C4E00A9E2D0 /* Main.storyboard */,
-				CF47A334287E2D5D00A9E2D0 /* DetalheLembreteViewController.swift */,
+				CF47A323287E1BDA00A9E2D0 /* Assets.xcassets */,
 			);
 			path = AppMVCTodayDIO;
+			sourceTree = "<group>";
+		};
+		CF47A33A287E40A600A9E2D0 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				CF47A31C287E1BD900A9E2D0 /* SceneDelegate.swift */,
+				CF47A31A287E1BD900A9E2D0 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		CF47A33B287E40C400A9E2D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF47A332287E1C4E00A9E2D0 /* Main.storyboard */,
+				CF47A330287E1C3C00A9E2D0 /* LembreteCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF47A33C287E40DC00A9E2D0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CF47A33E287E414500A9E2D0 /* DataSource */,
+				CF47A31E287E1BD900A9E2D0 /* ViewController.swift */,
+				CF47A334287E2D5D00A9E2D0 /* DetalheLembreteViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CF47A33D287E410200A9E2D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF47A32E287E1C3000A9E2D0 /* Lembrete.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF47A33E287E414500A9E2D0 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				CF47A336287E398C00A9E2D0 /* LembreteDataSource.swift */,
+				CF47A338287E3B7300A9E2D0 /* DetalheLembreteDataSource.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +193,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF47A337287E398C00A9E2D0 /* LembreteDataSource.swift in Sources */,
 				CF47A31F287E1BD900A9E2D0 /* ViewController.swift in Sources */,
 				CF47A32F287E1C3000A9E2D0 /* Lembrete.swift in Sources */,
 				CF47A31B287E1BD900A9E2D0 /* AppDelegate.swift in Sources */,
+				CF47A339287E3B7300A9E2D0 /* DetalheLembreteDataSource.swift in Sources */,
 				CF47A331287E1C3C00A9E2D0 /* LembreteCell.swift in Sources */,
 				CF47A335287E2D5D00A9E2D0 /* DetalheLembreteViewController.swift in Sources */,
 				CF47A31D287E1BD900A9E2D0 /* SceneDelegate.swift in Sources */,

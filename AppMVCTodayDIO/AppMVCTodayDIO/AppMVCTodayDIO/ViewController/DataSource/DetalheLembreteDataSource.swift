@@ -1,5 +1,5 @@
 //
-//  DetalheLembreteViewController.swift
+//  DetalheLembreteDataSource.swift
 //  AppMVCTodayDIO
 //
 //  Created by kauekaj on 7/12/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetalheLembreteViewController: UITableViewController {
+class DetalheLembreteDataSource: NSObject {
     
     enum DetalheLinha: Int, CaseIterable {
         case titulo
@@ -44,19 +44,21 @@ class DetalheLembreteViewController: UITableViewController {
     
     var lembrete: Lembrete?
     
-    func configure(lembrete: Lembrete) {
+    init(lembrete: Lembrete) {
         self.lembrete = lembrete
+        super.init()
     }
 }
 
-extension DetalheLembreteViewController {
+extension DetalheLembreteDataSource: UITableViewDataSource {
+    
     static let detalheLembreteCellIdentifier = "DetalheLembreteCell"
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         DetalheLinha.allCases.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Self.detalheLembreteCellIdentifier, for: indexPath)
         
         let linha = DetalheLinha(rawValue: indexPath.row)

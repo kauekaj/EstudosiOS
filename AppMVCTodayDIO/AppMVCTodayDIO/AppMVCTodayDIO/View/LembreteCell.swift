@@ -15,11 +15,18 @@ class LembreteCell: UITableViewCell {
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var doneButton: UIButton!
     
-    var doneButtonAction: DoneButtonAction?
+    private var doneButtonAction: DoneButtonAction?
     
     @IBAction func doneButtonTapped(_ sender: UIButton) {
         doneButtonAction?()
         print("Tapped")
     }
     
+    func configure(titulo: String, data: String, foiFeito: Bool, acaoBotao: @escaping DoneButtonAction) {
+        self.titleLabel.text = titulo
+        self.dateLabel.text = data
+        let imagem = foiFeito ? UIImage(systemName: "circle.fill") : UIImage(systemName: "circle")
+        doneButton.setBackgroundImage(imagem, for: .normal)
+        self.doneButtonAction = acaoBotao
+    }
 }
