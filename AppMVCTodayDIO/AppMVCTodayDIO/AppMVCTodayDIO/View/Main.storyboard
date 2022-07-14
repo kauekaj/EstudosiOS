@@ -24,15 +24,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30r-kX-6w4">
-                                            <rect key="frame" x="20" y="27" width="45" height="45"/>
+                                            <rect key="frame" x="20" y="27.5" width="45" height="44"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="45" id="mT1-Ed-kq4"/>
                                                 <constraint firstAttribute="width" secondItem="30r-kX-6w4" secondAttribute="height" multiplier="1:1" id="xj1-rK-VeE"/>
                                             </constraints>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="">
-                                                <backgroundConfiguration key="background" image="circle" catalog="system"/>
-                                            </buttonConfiguration>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="" backgroundImage="circle" catalog="system"/>
                                             <connections>
                                                 <action selector="doneButtonTapped:" destination="S9v-A7-tQs" eventType="touchUpInside" id="div-Kq-8WD"/>
                                             </connections>
@@ -52,7 +50,8 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="F3b-G7-5iL" firstAttribute="top" secondItem="VVf-N0-ME8" secondAttribute="top" constant="20" symbolic="YES" id="0N1-ks-oCW"/>
-                                        <constraint firstAttribute="bottom" secondItem="tw7-62-S4K" secondAttribute="bottom" constant="20" symbolic="YES" id="2A3-yj-8mw"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tw7-62-S4K" secondAttribute="bottom" constant="20" symbolic="YES" id="2A3-yj-8mw"/>
+                                        <constraint firstItem="tw7-62-S4K" firstAttribute="top" secondItem="F3b-G7-5iL" secondAttribute="bottom" constant="17" id="2i0-Hl-q2k"/>
                                         <constraint firstItem="F3b-G7-5iL" firstAttribute="leading" secondItem="30r-kX-6w4" secondAttribute="trailing" constant="8" symbolic="YES" id="E4m-jE-BVC"/>
                                         <constraint firstItem="30r-kX-6w4" firstAttribute="centerY" secondItem="VVf-N0-ME8" secondAttribute="centerY" id="Fml-IJ-jbG"/>
                                         <constraint firstItem="tw7-62-S4K" firstAttribute="leading" secondItem="F3b-G7-5iL" secondAttribute="leading" id="UvF-3C-hcR"/>
