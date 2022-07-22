@@ -18,6 +18,7 @@
 		CF37D314287F874000A33F3B /* ListaLembretesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37D313287F874000A33F3B /* ListaLembretesViewModel.swift */; };
 		CF65B16528875D79002446DA /* DetalheLembreteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF65B16428875D79002446DA /* DetalheLembreteViewController.swift */; };
 		CF65B16728876029002446DA /* LembreteCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF65B16628876029002446DA /* LembreteCellViewModel.swift */; };
+		CF65B16A28876BBF002446DA /* LembretesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF65B16928876BBF002446DA /* LembretesDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		CF37D313287F874000A33F3B /* ListaLembretesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaLembretesViewModel.swift; sourceTree = "<group>"; };
 		CF65B16428875D79002446DA /* DetalheLembreteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheLembreteViewController.swift; sourceTree = "<group>"; };
 		CF65B16628876029002446DA /* LembreteCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LembreteCellViewModel.swift; sourceTree = "<group>"; };
+		CF65B16928876BBF002446DA /* LembretesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LembretesDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,20 +68,53 @@
 		CF37D2FA287F7E9900A33F3B /* AppMVVMTodayDIO */ = {
 			isa = PBXGroup;
 			children = (
-				CF37D2FB287F7E9900A33F3B /* AppDelegate.swift */,
-				CF37D2FD287F7E9900A33F3B /* SceneDelegate.swift */,
-				CF37D2FF287F7E9900A33F3B /* ListaLembreteViewController.swift */,
-				CF37D30F287F7EF900A33F3B /* Lembrete.swift */,
-				CF37D301287F7E9900A33F3B /* Main.storyboard */,
+				CF65B16D28876D97002446DA /* AppDelegate */,
+				CF65B16C28876D81002446DA /* View e ViewController */,
+				CF65B16B28876D78002446DA /* ViewModel */,
+				CF65B16828876B9F002446DA /* Model */,
 				CF37D304287F7E9900A33F3B /* Assets.xcassets */,
 				CF37D306287F7E9900A33F3B /* LaunchScreen.storyboard */,
 				CF37D309287F7E9900A33F3B /* Info.plist */,
-				CF37D311287F840A00A33F3B /* LembreteCell.swift */,
-				CF37D313287F874000A33F3B /* ListaLembretesViewModel.swift */,
-				CF65B16428875D79002446DA /* DetalheLembreteViewController.swift */,
-				CF65B16628876029002446DA /* LembreteCellViewModel.swift */,
 			);
 			path = AppMVVMTodayDIO;
+			sourceTree = "<group>";
+		};
+		CF65B16828876B9F002446DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF37D30F287F7EF900A33F3B /* Lembrete.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF65B16B28876D78002446DA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CF65B16628876029002446DA /* LembreteCellViewModel.swift */,
+				CF37D313287F874000A33F3B /* ListaLembretesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CF65B16C28876D81002446DA /* View e ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CF37D2FF287F7E9900A33F3B /* ListaLembreteViewController.swift */,
+				CF37D311287F840A00A33F3B /* LembreteCell.swift */,
+				CF65B16928876BBF002446DA /* LembretesDataSource.swift */,
+				CF65B16428875D79002446DA /* DetalheLembreteViewController.swift */,
+				CF37D301287F7E9900A33F3B /* Main.storyboard */,
+			);
+			path = "View e ViewController";
+			sourceTree = "<group>";
+		};
+		CF65B16D28876D97002446DA /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				CF37D2FB287F7E9900A33F3B /* AppDelegate.swift */,
+				CF37D2FD287F7E9900A33F3B /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF65B16A28876BBF002446DA /* LembretesDataSource.swift in Sources */,
 				CF37D300287F7E9900A33F3B /* ListaLembreteViewController.swift in Sources */,
 				CF37D310287F7EF900A33F3B /* Lembrete.swift in Sources */,
 				CF65B16728876029002446DA /* LembreteCellViewModel.swift in Sources */,
