@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TesteUnitarioDIO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ILa-7k-T8f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vel-SD-Kok">
+                                <rect key="frame" x="107" y="485.5" width="200" height="32.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Xg6-7C-yxy"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Gerar Cor">
+                                            <attributes>
+                                                <font key="NSFont" size="16" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="generateColorButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dvt-QL-FUu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x50-xK-VdP">
+                                <rect key="frame" x="175" y="333" width="64" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPS-0V-2dX">
+                                <rect key="frame" x="107" y="435.5" width="200" height="32.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="75Q-U4-pyM"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemIndigoColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Criar Número">
+                                            <attributes>
+                                                <font key="NSFont" size="16" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.22352941179999999" green="0.18823529410000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="generateNumberButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Hd-S7-imS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jvi-U3-e5i"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x50-xK-VdP" firstAttribute="centerY" secondItem="ILa-7k-T8f" secondAttribute="centerY" constant="-100" id="Dxb-e9-uc3"/>
+                            <constraint firstItem="x50-xK-VdP" firstAttribute="centerX" secondItem="ILa-7k-T8f" secondAttribute="centerX" id="RGI-jq-F9G"/>
+                            <constraint firstItem="jPS-0V-2dX" firstAttribute="centerX" secondItem="ILa-7k-T8f" secondAttribute="centerX" id="SL0-W8-fqi"/>
+                            <constraint firstItem="Vel-SD-Kok" firstAttribute="firstBaseline" secondItem="jPS-0V-2dX" secondAttribute="baseline" constant="50" id="Ve7-a0-2ci"/>
+                            <constraint firstItem="Vel-SD-Kok" firstAttribute="centerX" secondItem="ILa-7k-T8f" secondAttribute="centerX" id="oz1-Df-6nh"/>
+                            <constraint firstItem="jPS-0V-2dX" firstAttribute="firstBaseline" secondItem="x50-xK-VdP" secondAttribute="baseline" constant="100" id="tgY-8v-CXF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="generateColorButton" destination="Vel-SD-Kok" id="hZD-BN-VO8"/>
+                        <outlet property="generateNumberButton" destination="jPS-0V-2dX" id="Vs0-Dp-xLi"/>
+                        <outlet property="label" destination="x50-xK-VdP" id="SF2-Po-gag"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="114"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
