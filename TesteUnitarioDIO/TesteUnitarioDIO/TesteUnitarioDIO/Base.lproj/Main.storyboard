@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vel-SD-Kok">
-                                <rect key="frame" x="107" y="485.5" width="200" height="32.5"/>
+                                <rect key="frame" x="107" y="470.5" width="200" height="32.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Xg6-7C-yxy"/>
                                 </constraints>
@@ -35,14 +35,14 @@
                                     <action selector="generateColorButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dvt-QL-FUu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x50-xK-VdP">
-                                <rect key="frame" x="175" y="333" width="64" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x50-xK-VdP">
+                                <rect key="frame" x="207" y="348" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPS-0V-2dX">
-                                <rect key="frame" x="107" y="435.5" width="200" height="32.5"/>
+                                <rect key="frame" x="107" y="420.5" width="200" height="32.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="75Q-U4-pyM"/>
                                 </constraints>
@@ -50,9 +50,10 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Criar Número">
+                                        <fragment content="Gerar Número">
                                             <attributes>
                                                 <font key="NSFont" size="16" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
