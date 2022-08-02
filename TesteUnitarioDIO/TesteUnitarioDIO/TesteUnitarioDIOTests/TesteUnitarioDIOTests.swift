@@ -10,23 +10,7 @@ import XCTest
 
 class TesteUnitarioDIOTests: XCTestCase {
 
-    func testGenerateRandomNumber() {
-        let viewController = ViewController()
-        viewController.generateEvenNumber()
-        let randomNumber = viewController.generateRandomNumber()
-                
-        XCTAssertNotNil(randomNumber)
-        XCTAssertNotEqual(randomNumber, "", "O retorno não pode ser vazio")
-    }
     
-    func testGenerateRandomNumberFailure() {
-        let viewController = ViewController()
-        //viewController.generateEvenNumber()
-        let randomNumber = viewController.generateRandomNumber()
-        
-        XCTAssertEqual(randomNumber, "", "O retorno deve ser vazio")
-        
-    }
 
     func testExample() throws {
         // This is an example of a functional test case.

@@ -49,6 +49,7 @@ class ViewController: UIViewController {
     }
     
     func generateEvenNumber() {
+        //testData.filter{number in number % 2 == 0}.forEach{number in evenNumbers.append(number)}
         for number in testData {
             if number % 2 == 0 {
                 evenNumbers.append(number)
